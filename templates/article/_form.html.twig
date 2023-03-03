@@ -1,0 +1,35 @@
+{{ form_start(form) }}
+    {#{ form_widget(form) }#}
+    {{ form_row(form.title) }}
+    <div class="my-3">
+        {{ form_row(form.content) }}
+    </div>
+
+    {% if app.request.get('_route') == 'article_edit' %}
+        {% if article.image is not empty %}
+            {% trans %}Active image{% endtrans %}:<br>
+            <img src="{{ asset('uploads/images/articles/' ~ article.image) }}" alt="{{ article.title }}" class="img-fluid mb-3" 
+            style="max-width: 350px; width: 100%;">
+            <p>
+                <a href="{{ path('article_delete_image', {'id': article.id}) }}" class="btn btn-sm btn-danger">{% trans %}Delete image{% endtrans %}</a>
+            </p>
+        {% else %}
+            <div class="text-white bg-danger p-2 mb-2 text-center">
+                <i class="bi bi-exclamation-lg"></i> {% trans %}No active image for this article. Please upload one.{% endtrans %}
+            </div>
+        {% endif %}
+    {% endif %}
+    
+    {{ form_row(form.image) }}
+    {{ form_row(form.category) }}
+    {{ form_row(form.tag) }}
+    <div class="mt-3">
+        {{ form_row(form.is_active) }}
+    </div>
+
+    <div class="mt-4">
+        <button class="btn btn-sm btn-success">{{ button_label|default('Save')|trans }}</button> 
+        <button class="btn btn-sm btn-secondary" type="reset">{% trans %}Reset{% endtrans %}</button> 
+        <a class="btn btn-sm btn-primary" href="{{ path('article_index') }}">{% trans %}back to list{% endtrans %}</a>
+    </div>
+{{ form_end(form) }}

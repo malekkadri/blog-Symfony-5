@@ -1,0 +1,158 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}{{ site_name }}: articles index{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Blog</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li><a href="{{ path('admin') }}">Admin</a></li>
+                    <li>{% trans %}Admin index{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            {% for message in app.flashes('message') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+
+            {% for message in app.flashes('message_deleted') %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    <h2>{% trans %}Admin index{% endtrans %}</h2>
+
+                    <div class="table-responsive-sm">
+                    <table class="table table-sm table-hover">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Categories</th>
+      <td> <a href="{{ path('category_admin_index') }}" class="btn btn-info fw-bold p-3 fs-6">{% trans %}Categories list{% endtrans %}</a></td>
+      <td> <a href="{{ path('category_new') }}" class="btn btn-success fw-bold p-3 fs-6">{% trans %}New category{% endtrans %}</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Articles</th>
+      <td> <a href="{{ path('article_index') }}" class="btn btn-info fw-bold p-3 fs-6">{% trans %}Articles list{% endtrans %}</a></td>
+      <td> <a href="{{ path('article_new') }}" class="btn btn-success fw-bold p-3 fs-6">{% trans %}New Article{% endtrans %}</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Comments</th>
+      <td> <a href="{{ path('comment_admin_index') }}" class="btn btn-warning fw-bold p-3 fs-6">{% trans %}Comments list{% endtrans %}</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">Tags</th>
+      <td> <a href="{{ path('tag_admin_index') }}" class="btn btn-info fw-bold p-3 fs-6">{% trans %}Tags list{% endtrans %}</a></td>
+      <td> <a href="{{ path('tag_new') }}" class="btn btn-success fw-bold p-3 fs-6">{% trans %}New Tag{% endtrans %}</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    {# <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <h2 class="text-center fw-bold card py-2 mb-4">{% trans %}DASHBOARD{% endtrans %}</h2>
+
+            <div class="row d-flex justify-content-center mb-5">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="d-grid gap-2 card-body">
+                            <h5 class="card-title fw-bold">{% trans %}ARTICLES{% endtrans %}</h5>
+                            <a href="{{ path('article_index') }}" class="btn btn-primary fw-bold p-3 fs-6">{% trans %}Articles list{% endtrans %}</a>
+                            <br>
+                            <a href="{{ path('article_new') }}" class="btn btn-success fw-bold p-3 fs-6">{% trans %}New article{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="d-grid gap-2 card-body">
+                            <h5 class="card-title fw-bold">{% trans %}CATEGORIES{% endtrans %}</h5>
+                            <a href="{{ path('category_admin_index') }}" class="btn btn-info fw-bold p-3 fs-6">{% trans %}Categories list{% endtrans %}</a>
+                            <br>
+                            <a href="{{ path('category_new') }}" class="btn btn-success fw-bold p-3 fs-6">{% trans %}New category{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="d-grid gap-2 card-body">
+                            <h5 class="card-title fw-bold">TAGS</h5>
+                            <a href="{{ path('tag_admin_index') }}" class="btn btn-warning fw-bold p-3 fs-6">{% trans %}Tags list{% endtrans %}</a>
+                            <br>
+                            <a href="{{ path('tag_new') }}" class="btn btn-success fw-bold p-3 fs-6">{% trans %}New tag{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="d-grid gap-2 card-body">
+                            <h5 class="card-title fw-bold">{% trans %}COMMENTS{% endtrans %}</h5>
+                            <a href="{{ path('comment_admin_index') }}" class="btn btn-warning fw-bold p-3 fs-6">{% trans %}Comments list{% endtrans %}</a>
+                            <br>
+                            <a href="" class="btn btn-outline-success fw-bold p-3 fs-6">{% trans %}Other{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="d-grid gap-2 card-body">
+                            <h5 class="card-title fw-bold">{% trans %}USERS{% endtrans %}</h5>
+                            <a href="{{ path('user_index') }}" class="btn btn-warning fw-bold p-3 fs-6">{% trans %}Users list{% endtrans %}</a>
+                            <br>
+                            <a href="{{ path('user_new') }}" class="btn btn-success fw-bold p-3 fs-6">{% trans %}New user{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="d-grid gap-2 card-body">
+                            <h5 class="card-title fw-bold">{% trans %}LINKS{% endtrans %}</h5>
+                            <a href="{{ path('link_admin_index') }}" class="btn btn-warning fw-bold p-3 fs-6">{% trans %}Links list{% endtrans %}</a>
+                            <br>
+                            <a href="{{ path('link_new') }}" class="btn btn-success fw-bold p-3 fs-6">{% trans %}New link{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> #}
+    </section>
+</main>
+
+{% endblock %}

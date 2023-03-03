@@ -1,0 +1,40 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}New Comment{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Comment{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li><a href="{{ path('admin') }}">Admin</a></li>
+                    <li>{% trans %}Comment index{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    <h1>{% trans %}Create new Comment{% endtrans %}</h1>
+
+                    {{ include('comment/_form.html.twig') }}
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

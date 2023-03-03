@@ -1,0 +1,34 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+
+    globals:
+        locales: '%app.locales%'
+        site_name: 'A+BFB'
+        site_name_full: 'My Wonderfull Blog'
+        site_url: 'A+BFB.com'
+        site_url_full: 'https://www.A+BFB.com'
+        site_mail: 'contact@A+BFB.com'
+        site_author: 'citizenz7'
+        site_address1: 'A108 Adam Street'
+        site_address_city: 'New York'
+        site_address_code: 'NY 535022'
+        site_address_country: 'United States'
+        site_address_phone: '+1 5589 55488 55'
+        site_version: '1.0.1'
+        site_year: '2021'
+        site_keywords: 'website, blog, news, info, opensource, linux, windows, apple, smartphone, ios, android, cinema, music'
+        site_presentation: 
+            'Cras fermentum odio eu feugiat lide par naso tierra. 
+            Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+        github_repo: 'https://github.com/citizenz7/blog'
+        github_url: ''
+        twitter_url: ''
+        facebook_url: ''
+        instagram_url: ''
+        linkedin_url: ''
+        discord_url: ''
+
+when@test:
+    twig:
+        strict_variables: true

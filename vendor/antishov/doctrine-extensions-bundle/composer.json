@@ -1,0 +1,43 @@
+{
+    "name": "antishov/doctrine-extensions-bundle",
+    "type": "symfony-bundle",
+    "description": "Forked from stof/doctrine-extensions-bundle integration of the gedmo/doctrine-extensions with Symfony 4",
+    "keywords": ["tree", "behaviors", "doctrine2", "extensions", "gedmo", "sluggable","loggable", "translatable", "nestedset", "sortable", "timestampable", "stof"],
+    "homepage": "https://github.com/antishov/StofDoctrineExtensionsBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Antishov Viktor",
+            "email": "antishov.viktor@gmail.com"
+        },
+        {
+            "name": "Christophe Coevoet",
+            "email": "stof@notk.org"
+        }
+    ],
+    "replace": {
+        "stof/doctrine-extensions-bundle": "self.version"
+    },
+    "require": {
+        "symfony/mime": "^4.3|^5.0",
+        "php": "^7.2.5 || ^8.0",
+        "symfony/framework-bundle": "^4.4|^5.0",
+        "gedmo/doctrine-extensions": "^2.3.4 || ^3.0"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^4.4|^5.0",
+        "symfony/security-bundle": "^4.4|^5.0"
+    },
+    "suggest": {
+        "doctrine/doctrine-bundle": "to use the ORM extensions",
+        "doctrine/mongodb-odm-bundle": "to use the MongoDB ODM extensions"
+    },
+    "autoload": {
+        "psr-4": { "Stof\\DoctrineExtensionsBundle\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

@@ -1,0 +1,96 @@
+<?php //37f949f1394d8c0710fa857706679ef4
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'dpid' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT a0_.id AS id_0, a0_.title AS title_1, a0_.content AS content_2, a0_.created_at AS created_at_3, a0_.updated_at AS updated_at_4, a0_.is_active AS is_active_5, a0_.image AS image_6, a0_.slug AS slug_7, a0_.views AS views_8, a0_.author_id AS author_id_9 FROM article a0_ WHERE a0_.id IN (?) ORDER BY a0_.created_at DESC',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'p' => 'App\\Entity\\Article',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'title_1' => 'title',
+                    'content_2' => 'content',
+                    'created_at_3' => 'created_at',
+                    'updated_at_4' => 'updated_at',
+                    'is_active_5' => 'is_active',
+                    'image_6' => 'image',
+                    'slug_7' => 'slug',
+                    'views_8' => 'views',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'author_id_9' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'p' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'author_id_9' => 'author_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'p',
+                    'title_1' => 'p',
+                    'content_2' => 'p',
+                    'created_at_3' => 'p',
+                    'updated_at_4' => 'p',
+                    'is_active_5' => 'p',
+                    'image_6' => 'p',
+                    'slug_7' => 'p',
+                    'views_8' => 'p',
+                    'author_id_9' => 'p',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Article',
+                    'title_1' => 'App\\Entity\\Article',
+                    'content_2' => 'App\\Entity\\Article',
+                    'created_at_3' => 'App\\Entity\\Article',
+                    'updated_at_4' => 'App\\Entity\\Article',
+                    'is_active_5' => 'App\\Entity\\Article',
+                    'image_6' => 'App\\Entity\\Article',
+                    'slug_7' => 'App\\Entity\\Article',
+                    'views_8' => 'App\\Entity\\Article',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

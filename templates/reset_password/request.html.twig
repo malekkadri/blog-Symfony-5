@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}Reset your password{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Reset password{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li>{% trans %}Reset password{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    {% for flashError in app.flashes('reset_password_error') %}
+                    <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+                    {% endfor %}
+                    <h2>{% trans %}Reset your password{% endtrans %}</h2>
+
+                    {{ form_start(requestForm) }}
+                    {{ form_row(requestForm.email) }}
+                    <div class="my-3">
+                        <small>
+                            {% trans %}Enter your email address and we we will send you a link to reset your
+                            password.{% endtrans %}
+                        </small>
+                    </div>
+
+                    <button class="btn btn-primary">{% trans %}Send password reset email{% endtrans %}</button>
+                    {{ form_end(requestForm) }}
+                </div>
+                {% block sidebar %}
+                    {{ sidebar() }}
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

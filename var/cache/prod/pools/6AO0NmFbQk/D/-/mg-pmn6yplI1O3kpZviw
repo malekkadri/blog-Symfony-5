@@ -1,0 +1,22 @@
+<?php //App_Entity_Category_%24GEDMO_SLUGGABLE_CLASSMETADATA
+
+return [PHP_INT_MAX, [
+    'slugs' => [
+        'slug' => [
+            'fields' => [
+                'title',
+            ],
+            'slug' => 'slug',
+            'style' => 'default',
+            'dateFormat' => 'Y-m-d-H:i',
+            'updatable' => true,
+            'unique' => true,
+            'unique_base' => null,
+            'separator' => '-',
+            'prefix' => '',
+            'suffix' => '',
+            'handlers' => [],
+        ],
+    ],
+    'useObjectClass' => 'App\\Entity\\Category',
+]];

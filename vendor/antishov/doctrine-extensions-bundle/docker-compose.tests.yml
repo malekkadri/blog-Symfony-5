@@ -1,0 +1,30 @@
+version: "3.3"
+services:
+  phpunit7.2.5:
+    command: ./vendor/bin/simple-phpunit -v
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        php_version: 7.2.5
+  phpunit7.3:
+    command: ./vendor/bin/simple-phpunit -v
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        php_version: 7.3
+  phpunit7.4:
+    command: ./vendor/bin/simple-phpunit -v
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        php_version: 7.4
+  phpunit8:
+    command: ./vendor/bin/simple-phpunit -v
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        php_version: 8

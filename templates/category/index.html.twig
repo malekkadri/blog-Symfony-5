@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}categories index{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Category{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li>{% trans %}Category index{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+            <div class="row py-5">
+                <div class="col mb-4">
+                    <h1>{% trans %}Category index{% endtrans %}</h1>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        {% for category in categories %}
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title border-bottom pb-1">
+                                            <a href="{{ path('category_show', {'slug': category.slug}) }}" class="text-dark">{{ category.title }}</a>
+                                        </h5>
+                                        <p class="card-text">
+                                            <ul class="list-group list-group-flush">
+                                                {% for a in category.articles %}
+                                                    <li class="list-group-item">
+                                                        <i class="bi bi-arrow-down-right-square-fill"></i> 
+                                                        <a href="{{ path('article_show', { 'slug': a.slug }) }}">{{ a.title }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            {% trans %}no records found{% endtrans %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+{% endblock %}

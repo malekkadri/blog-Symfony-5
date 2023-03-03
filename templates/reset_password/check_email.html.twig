@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}Password Reset Email Sent{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Reset password{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li>{% trans %}Reset password{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    <p>
+                        {% trans %}If an account matching your email exists, then an email was just sent that contains a
+                        link that you can use to reset your password.
+                        This link will expire in{% endtrans %}
+                        {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+                    </p>
+                    <p>{% trans %}If you don't receive an email please check your spam folder or{% endtrans %} <a
+                            href="{{ path('app_forgot_password_request') }}">{% trans %}try again{% endtrans %}</a>.</p>
+                </div>
+                {% block sidebar %}
+                    {{ sidebar() }}
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

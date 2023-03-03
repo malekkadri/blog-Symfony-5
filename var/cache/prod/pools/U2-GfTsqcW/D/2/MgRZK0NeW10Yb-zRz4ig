@@ -1,0 +1,50 @@
+<?php //App.Entity.User
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        (\Symfony\Component\VarExporter\Internal\Registry::$factories['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'constraints' => [
+                [
+                    $o[1],
+                ],
+            ],
+            'constraintsByGroup' => [
+                [
+                    'Default' => [
+                        $o[1],
+                    ],
+                    'User' => [
+                        $o[1],
+                    ],
+                ],
+            ],
+            'name' => [
+                'App\\Entity\\User',
+            ],
+            'defaultGroup' => [
+                'User',
+            ],
+            'groups' => [
+                1 => [
+                    'Default',
+                    'User',
+                ],
+            ],
+            'message' => [
+                1 => 'There is already an account with this email',
+            ],
+            'fields' => [
+                1 => [
+                    'email',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

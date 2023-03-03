@@ -1,0 +1,97 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}Comment index{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Comment{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li><a href="{{ path('admin') }}">Admin</a></li>
+                    <li>{% trans %}Comment index{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            {% for message in app.flashes('message') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert"">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+
+            {% for message in app.flashes('message_deleted') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert"">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    <h1>{% trans %}Comment index{% endtrans %}</h1>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th width="4%">{{ knp_pagination_sortable(comments, 'Id', 'p.id') }}</th>
+                                <th>{{ knp_pagination_sortable(comments, 'Content', 'p.content') }}</th>
+                                <th width="12%">{{ knp_pagination_sortable(comments, 'Nickname', 'p.nickname') }}</th>
+                                <th>{{ knp_pagination_sortable(comments, 'Email', 'p.email') }}</th>
+                                <th width="12%" class="small">{{ knp_pagination_sortable(comments, 'Poted on', 'p.created_at') }}</th>
+                                <th width="6%" class="small">{{ knp_pagination_sortable(comments, 'Terms', 'p.rgpd') }}</th>
+                                <th width="11%"></th>
+                                <th width="4%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for comment in comments %}
+                            <tr>
+                                <td>{{ comment.id }}</td>
+                                <td>{{ comment.content|slice(0,100) }}...</td>
+                                <td>{{ comment.nickname }}</td>
+                                <td>{{ comment.email }}</td>
+                                <td class="small">{{ comment.createdAt ? comment.createdAt|format_datetime('medium', 'short') : '' }}</td>
+                                <td class="small">{{ comment.rgpd ? 'Yes' : 'No' }}</td>
+                                <td>
+                                   
+                                    <a class="btn btn-sm btn-warning" href="{{ path('comment_edit', {'id': comment.id}) }}">{% trans %}edit{% endtrans %}</a>
+                                </td>
+                                <td>
+                                    {{ include('comment/_delete_form.html.twig') }}
+                                </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="8">{% trans %}no records found{% endtrans %}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    {#
+                    <a class="btn btn-success" href="{{ path('comment_new') }}">Create new</a>
+                    #}
+                    
+                </div>
+            </div>
+            <div class="pagination justify-content-center px-2 mt-4">
+                {{ knp_pagination_render(comments) }}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

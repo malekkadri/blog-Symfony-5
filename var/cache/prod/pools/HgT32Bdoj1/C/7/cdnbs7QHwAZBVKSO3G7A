@@ -1,0 +1,31 @@
+<?php //getTypes.a%253A3%253A%257Bi%253A0%253Bs%253A15%253A%2522App%255CEntity%255CUser%2522%253Bi%253A1%253Bs%253A5%253A%2522roles%2522%253Bi%253A2%253Ba%253A0%253A%257B%257D%257D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\PropertyInfo\\Type'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\PropertyInfo\\Type')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\PropertyInfo\\Type' => [
+            'builtinType' => [
+                'array',
+            ],
+            'nullable' => [
+                false,
+            ],
+            'collection' => [
+                true,
+            ],
+            'collectionKeyType' => [
+                [],
+            ],
+            'collectionValueType' => [
+                [],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

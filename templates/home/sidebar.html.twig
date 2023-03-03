@@ -1,0 +1,96 @@
+
+<div class="col-lg-4">
+
+    <div class="sidebar">
+
+        <h3 class="sidebar-title">{% trans %}Search{% endtrans %}</h3>
+        <div class="sidebar-item search-form">
+
+            {#
+            <form action="{{ path('search') }}">
+                <input type="text">
+                <button type="submit"><i class="bi bi-search"></i></button>
+            </form>
+            #}
+
+            {{ render(controller(
+                'App\\Controller\\SearchController::searchBar'
+            )) }}
+
+            
+        </div><!-- End sidebar search formn-->
+
+        <h3 class="sidebar-title">{% trans %}Categories{% endtrans %}</h3>
+        <div class="sidebar-item categories">
+            <ul>
+                {% for cat in categoriesAll %}
+                <li class="d-flex justify-content-between align-items-center pb-1">
+                    <a href="{{ path('category_show', {'slug': cat.slug}) }}">
+                        <i class="bi bi-arrow-right-short"></i> {{ cat.title }}
+                    </a> 
+                    <span class="badge bg-primary">{{ cat.articles|length }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div><!-- End sidebar categories-->
+
+        <h3 class="sidebar-title">{% trans %}Popular Posts{% endtrans %}</h3>
+        <div class="sidebar-item recent-posts">
+            {% for a in articles %}
+            <div class="post-item clearfix">
+                <img src="../uploads/images/articles/{{ a.image }}" alt="{{ a.title }}" class="img-fluid" style="max-width: 85px; width: 100%;">
+                <h4><a href="{{ path('article_show', {'slug': a.slug}) }}">{{ a.title }}</a> <span class="badge bg-primary">views: {{ a.views }}</span></h4>
+                <time datetime="{{ a.created_at|format_datetime('medium', 'short') }}">{% trans %}Posted on{% endtrans %} {{ a.created_at|format_datetime('medium', 'short') }}</time>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h3 class="sidebar-title">{% trans %}Tags{% endtrans %}</h3>
+        <div class="sidebar-item tags mb-4">
+            <ul>
+                {% for t in tags %}
+                <li>
+                    <a href="{{ path('tag_show', {'slug': t.slug}) }}">{{ t.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div><!-- End sidebar tags-->
+
+        <h3 class="sidebar-title">{% trans %}Links{% endtrans %}</h3>
+        <div class="sidebar-item mb-4">
+            <ul class="list-group list-group-flush text-meta2">
+                {% for l in linksAll %}
+                <li class="list-group-item">
+                    <i class="bi bi-link-45deg"></i> <a target="_blank" href="{{ l.url }}">{{ l.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div><!-- End sidebar links-->
+
+        <h3 class="sidebar-title">{% trans %}Stats{% endtrans %}</h3>
+        <div class="sidebar-item tags">
+            <ul class="list-group list-group-flush text-meta2">
+                <li class="list-group-item d-flex justify-content-between align-items-center">{% trans %}Posts{% endtrans %}
+                    <span class="badge bg-success rounded py-1 px-2 ml-5">
+                        {{ articlesAll | length }}
+                    </span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">{% trans %}Comments{% endtrans %}
+                    <span class="badge bg-success rounded py-1 px-2 ml-5">
+                        {{ commentsAll | length }}
+                    </span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">{% trans %}Views{% endtrans %}
+                    <span class="badge bg-success rounded py-1 px-2 ml-5">
+                        {% for view in views %}
+                            {{ view.totalViews | number_format(0, '', ' ') }}
+                        {% endfor %}
+                    </span>
+                </li>
+        </ul>
+        </div><!-- End sidebar stats-->
+
+
+    </div><!-- End sidebar -->
+
+</div><!-- End blog sidebar -->

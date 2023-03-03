@@ -1,0 +1,20 @@
+<?php //Symfony.Component.Security.Core.User.PasswordAuthenticatedUserInterface
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        (\Symfony\Component\VarExporter\Internal\Registry::$factories['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface',
+            ],
+            'defaultGroup' => [
+                'PasswordAuthenticatedUserInterface',
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

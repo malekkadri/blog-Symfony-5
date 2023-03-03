@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}sign-up{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Sign-up{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li>{% trans %}Sign-up{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+            <div class="row d-flex justify-content-center">
+                <div class="col-4 mb-5">
+                    {% for flashError in app.flashes('verify_email_error') %}
+                    <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+                    {% endfor %}
+
+                    {% for msg in app.session.flashBag.get('successRegister') %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ msg|trans }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+
+                    <div class="d-flex justify-content-center">
+                        <h1 class="mb-4">{% trans %}Sign-up{% endtrans %}</h1>
+                    </div>
+
+                    {{ form_start(registrationForm) }}
+                        {{ form_row(registrationForm.email) }}
+                        {{ form_row(registrationForm.username) }}
+                        {{ form_row(registrationForm.plainPassword, {label: 'Password'}) }}
+
+                        <div class="d-flex justify-content-center">
+                            <p>
+                                <a href="{{ path('terms') }}">{% trans %}Agree terms of service{% endtrans %}</a>
+                                {{ form_row(registrationForm.agreeTerms) }}
+                            </p>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success">{% trans %}Register{% endtrans %}</button> 
+                            <button type="reset" class="btn btn-secondary">{% trans %}Reset{% endtrans %}</button>
+                        </div>
+                    {{ form_end(registrationForm) }}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}new articles{% endtrans %}{% endblock %}
+
+{% block stylesheets %}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Blog</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li>Admin Index</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    <h2>{% trans %}Create new Article{% endtrans %}</h2>
+
+                    {{ include('article/_form.html.twig') }}
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+        $(function(){
+            $('.select-tags').select2({
+                tags: true,
+                tokenSeparators: [',', ' ']
+            }).on('change', function(e){
+                let label = $(this).find("[data-select2-tag=true]")
+                if(label.length && $.inArray(label.val(), $(this).val() !== -1)){
+                    $.ajax({
+                        url: "/admin/tag/new/ajax/" + label.val(),
+                        type: "POST"
+                    }).done(function(data){
+                        label.replaceWith(`<option selected value="${data.id}">${label.val()}</option>`);
+                    })
+                }
+            });
+        })
+    </script>
+{% endblock %}

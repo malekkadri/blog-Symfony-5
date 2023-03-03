@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="2CwrYD2" resname="Thank you for you comment!">
+        <source>Thank you for you comment!</source>
+        <target>Merci pour votre commentaire !</target>
+      </trans-unit>
+      <trans-unit id="mabtXJs" resname="Tag edited with success!">
+        <source>Tag edited with success!</source>
+        <target>Le tag a été modifié avec succès !</target>
+      </trans-unit>
+      <trans-unit id="NV958p1" resname="Comments">
+        <source>Comments</source>
+        <target>Commentaires</target>
+      </trans-unit>
+      <trans-unit id="dIg2FMT" resname="views">
+        <source>views</source>
+        <target>lectures</target>
+      </trans-unit>
+      <trans-unit id="KzMbw2Q" resname="Posted by">
+        <source>Posted by</source>
+        <target>Posté par</target>
+      </trans-unit>
+      <trans-unit id="K0JE_yZ" resname="comments">
+        <source>comments</source>
+        <target>commentaires</target>
+      </trans-unit>
+      <trans-unit id="xEuy.VF" resname="comment">
+        <source>comment</source>
+        <target>commentaire</target>
+      </trans-unit>
+      <trans-unit id="wlP0Ub3" resname="Reply">
+        <source>Reply</source>
+        <target>Répondre</target>
+      </trans-unit>
+      <trans-unit id="O0P7EyP" resname="Leave a Reply">
+        <source>Leave a Reply</source>
+        <target>Envoyer une réponse</target>
+      </trans-unit>
+      <trans-unit id="211NK92" resname="Your email address will not be published.">
+        <source>Your email address will not be published.</source>
+        <target>Votre adresse e-mail ne sera pas publiée.</target>
+      </trans-unit>
+      <trans-unit id="qwcKPwm" resname="Posted on">
+        <source>Posted on</source>
+        <target>Posté le</target>
+      </trans-unit>
+      <trans-unit id="wpYC9Hd" resname="Read More">
+        <source>Read More</source>
+        <target>Lire la suite</target>
+      </trans-unit>
+      <trans-unit id="ScJmuqq" resname="Search">
+        <source>Search</source>
+        <target>Recherche</target>
+      </trans-unit>
+      <trans-unit id="uLHYlMa" resname="Categories">
+        <source>Categories</source>
+        <target>Catégories</target>
+      </trans-unit>
+      <trans-unit id="OV02oVy" resname="Popular Posts">
+        <source>Popular Posts</source>
+        <target>Articles les + lus</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="Tvyg0Qx" resname="About">
+        <source>About</source>
+        <target>A propos</target>
+      </trans-unit>
+      <trans-unit id="Z7aWRoY" resname="Dashboard">
+        <source>Dashboard</source>
+        <target>Tableau de bord</target>
+      </trans-unit>
+      <trans-unit id="1pajW90" resname="Profile">
+        <source>Profile</source>
+        <target>Profil</target>
+      </trans-unit>
+      <trans-unit id="0FJ_Sz1" resname="Logout">
+        <source>Logout</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="v9QCsvb" resname="Sign in">
+        <source>Sign in</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="XiuOllA" resname="Sign up">
+        <source>Sign up</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="5p4GFEh" resname="Terms of service">
+        <source>Terms of service</source>
+        <target>Conditions d'utilisation</target>
+      </trans-unit>
+      <trans-unit id="ukRc.zi" resname="Privacy policy">
+        <source>Privacy policy</source>
+        <target>Politique de confidentialité</target>
+      </trans-unit>
+      <trans-unit id="Epxnj85" resname="Disclaimer">
+        <source>Disclaimer</source>
+        <target>Avertissement</target>
+      </trans-unit>
+      <trans-unit id="Y9zriAC" resname="Phone">
+        <source>Phone</source>
+        <target>Téléphone</target>
+      </trans-unit>
+      <trans-unit id="bXHdgNa" resname="Tag's articles">
+        <source>Tag's articles</source>
+        <target>Articles du tag</target>
+      </trans-unit>
+      <trans-unit id="6bXumtW" resname="tag index">
+        <source>tag index</source>
+        <target>liste des tags</target>
+      </trans-unit>
+      <trans-unit id="0aAZYCY" resname="Tag index">
+        <source>Tag index</source>
+        <target>Liste des tags</target>
+      </trans-unit>
+      <trans-unit id="D5lam8." resname="no records found">
+        <source>no records found</source>
+        <target>Il n'y a aucun enregistrement</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="DFuBn0L" resname="Edit Ta">
+        <source>Edit Ta</source>
+        <target>Modifier le tag</target>
+      </trans-unit>
+      <trans-unit id="ghSLPaI" resname="New Tag">
+        <source>New Tag</source>
+        <target>Nouveau tag</target>
+      </trans-unit>
+      <trans-unit id="n5O_7wE" resname="Create new Tag">
+        <source>Create new Tag</source>
+        <target>Créer un nouveau tag</target>
+      </trans-unit>
+      <trans-unit id="2u52BrM" resname="Reset">
+        <source>Reset</source>
+        <target>Annuler</target>
+      </trans-unit>
+      <trans-unit id="EPbioXM" resname="back to lis">
+        <source>back to lis</source>
+        <target>retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="fozSBW2" resname="Title">
+        <source>Title</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id="HGMzUJ3" resname="show">
+        <source>show</source>
+        <target>voir</target>
+      </trans-unit>
+      <trans-unit id="JiEhxTc" resname="edit">
+        <source>edit</source>
+        <target>modifier</target>
+      </trans-unit>
+      <trans-unit id="w8.JoBb" resname="Create new ta">
+        <source>Create new ta</source>
+        <target>Créer un nouveau tag</target>
+      </trans-unit>
+      <trans-unit id="Om0Hv7h" resname="Your search results">
+        <source>Your search results</source>
+        <target>Vos résultats de recherche</target>
+      </trans-unit>
+      <trans-unit id="UlHStfo" resname="No result.">
+        <source>No result.</source>
+        <target>Il n'y a aucun résultat.</target>
+      </trans-unit>
+      <trans-unit id="qxDsoot" resname="Your search results:">
+        <source>Your search results:</source>
+        <target>Résulats de votre recherche :</target>
+      </trans-unit>
+      <trans-unit id="p_LSbo0" resname="by">
+        <source>by</source>
+        <target>par</target>
+      </trans-unit>
+      <trans-unit id="RPXj__x" resname="Comment">
+        <source>Comment</source>
+        <target>Commentaire</target>
+      </trans-unit>
+      <trans-unit id="X.Q50pl" resname="Comment index">
+        <source>Comment index</source>
+        <target>Liste des commentaires</target>
+      </trans-unit>
+      <trans-unit id="R70pB1_" resname="Content">
+        <source>Content</source>
+        <target>Contenu</target>
+      </trans-unit>
+      <trans-unit id="Ii5Sx.A" resname="Is_active">
+        <source>Is_active</source>
+        <target>Actif</target>
+      </trans-unit>
+      <trans-unit id="1yD2HIx" resname="Nickname">
+        <source>Nickname</source>
+        <target>Pseudo</target>
+      </trans-unit>
+      <trans-unit id="S9iCKr8" resname="Created_at">
+        <source>Created_at</source>
+        <target>Créé le</target>
+      </trans-unit>
+      <trans-unit id="U0M9PNE" resname="back to list">
+        <source>back to list</source>
+        <target>retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="kjQGlYm" resname="Active">
+        <source>Active</source>
+        <target>Actif</target>
+      </trans-unit>
+      <trans-unit id="kVLZnJQ" resname="Edit Comment">
+        <source>Edit Comment</source>
+        <target>Modifier le commentaire</target>
+      </trans-unit>
+      <trans-unit id="0kT6ve_" resname="New Comment">
+        <source>New Comment</source>
+        <target>Nouveau commentaire</target>
+      </trans-unit>
+      <trans-unit id="RHwZ1XY" resname="Create new Comment">
+        <source>Create new Comment</source>
+        <target>Créer un nouveau commentaire</target>
+      </trans-unit>
+      <trans-unit id="Xaj3_8K" resname="Back to list">
+        <source>Back to list</source>
+        <target>Retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="9DRbMyE" resname="Acces denied!">
+        <source>Acces denied!</source>
+        <target>Accès refusé</target>
+      </trans-unit>
+      <trans-unit id="tRLZfny" resname="User">
+        <source>User</source>
+        <target>Utilisateur</target>
+      </trans-unit>
+      <trans-unit id="oehMN.Z" resname="profil">
+        <source>profil</source>
+        <target>profil</target>
+      </trans-unit>
+      <trans-unit id="T3g4QC8" resname="Verified">
+        <source>Verified</source>
+        <target>Vérifié</target>
+      </trans-unit>
+      <trans-unit id="nDiUNDB" resname="Presentatio">
+        <source>Presentatio</source>
+        <target>Présentation</target>
+      </trans-unit>
+      <trans-unit id="w22Bnnv" resname="Use">
+        <source>Use</source>
+        <target>Utilisation</target>
+      </trans-unit>
+      <trans-unit id="uw3Ax_q" resname="edit profile">
+        <source>edit profile</source>
+        <target>Modifier le profil</target>
+      </trans-unit>
+      <trans-unit id="lAjiY_M" resname="Access denied!">
+        <source>Access denied!</source>
+        <target>Acces refusé !</target>
+      </trans-unit>
+      <trans-unit id="mtx_cv8" resname="Back to Home page">
+        <source>Back to Home page</source>
+        <target>Retour sur la page d'accueil</target>
+      </trans-unit>
+      <trans-unit id="O5I_1_F" resname="user index">
+        <source>user index</source>
+        <target>liste des utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="ezuwN7u" resname="User index">
+        <source>User index</source>
+        <target>Liste des utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="47ienTP" resname="Username">
+        <source>Username</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="haOas0X" resname="Yes">
+        <source>Yes</source>
+        <target>Oui</target>
+      </trans-unit>
+      <trans-unit id="HqRCoTS" resname="No">
+        <source>No</source>
+        <target>Non</target>
+      </trans-unit>
+      <trans-unit id="hDMatXa" resname="Create new user">
+        <source>Create new user</source>
+        <target>Créer un nouvel utilisateur</target>
+      </trans-unit>
+      <trans-unit id="6KiDUxl" resname="Edit User">
+        <source>Edit User</source>
+        <target>Modifier l'utilisateur</target>
+      </trans-unit>
+      <trans-unit id="kB3bPZr" resname="new User">
+        <source>new User</source>
+        <target>nouvelle utilisateur</target>
+      </trans-unit>
+      <trans-unit id="g36VwXo" resname="Create new User">
+        <source>Create new User</source>
+        <target>Créer un nouvel utilisateur</target>
+      </trans-unit>
+      <trans-unit id="Ab4wu0o" resname="reset">
+        <source>reset</source>
+        <target>annuler</target>
+      </trans-unit>
+      <trans-unit id="LoBdB.U" resname="back to profile">
+        <source>back to profile</source>
+        <target>Retour au profil</target>
+      </trans-unit>
+      <trans-unit id="yKeA0.P" resname="Log in!">
+        <source>Log in!</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="W7vlMYe" resname="Sign-in">
+        <source>Sign-in</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="acVpEs4" resname="You are logged in as">
+        <source>You are logged in as</source>
+        <target>__You are logged in as</target>
+      </trans-unit>
+      <trans-unit id="dDUw20Q" resname="Please sign in">
+        <source>Please sign in</source>
+        <target>Veuillez vous identifier</target>
+      </trans-unit>
+      <trans-unit id="588_9PF" resname="Password">
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="WsJl85a" resname="Confirm password">
+        <source>Confirm password</source>
+        <target>Confirmer le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="skvmNPq" resname="Useful Links">
+        <source>Useful Links</source>
+        <target>Liens utiles</target>
+      </trans-unit>
+      <trans-unit id="mLZwY8_" resname="Contact Us">
+        <source>Contact Us</source>
+        <target>Nous contacter</target>
+      </trans-unit>
+      <trans-unit id="KSwG8AR" resname="Category">
+        <source>Category</source>
+        <target>Catégorie</target>
+      </trans-unit>
+      <trans-unit id="i0L.2w2" resname="Category's articles">
+        <source>Category's articles</source>
+        <target>Articles de la catégorie</target>
+      </trans-unit>
+      <trans-unit id="xMqWl1g" resname="categories index">
+        <source>categories index</source>
+        <target>Liste des catégories</target>
+      </trans-unit>
+      <trans-unit id="xo05DSt" resname="Category index">
+        <source>Category index</source>
+        <target>Liste des catégories</target>
+      </trans-unit>
+      <trans-unit id="DZO3ehf" resname="Edit Category">
+        <source>Edit Category</source>
+        <target>Modifier la catégorie</target>
+      </trans-unit>
+      <trans-unit id="vVh7bj2" resname="new category">
+        <source>new category</source>
+        <target>Nouvelle catégorie</target>
+      </trans-unit>
+      <trans-unit id="GrHhIcD" resname="New category">
+        <source>New category</source>
+        <target>Nouvelle catégorie</target>
+      </trans-unit>
+      <trans-unit id="W6joEsF" resname="Create new Category">
+        <source>Create new Category</source>
+        <target>Créer une nouvelle catégorie</target>
+      </trans-unit>
+      <trans-unit id="j2EjUdV" resname="Category inde">
+        <source>Category inde</source>
+        <target>Liste des catégories</target>
+      </trans-unit>
+      <trans-unit id="BERQBOo" resname="Create new category">
+        <source>Create new category</source>
+        <target>Créer une nouvelle catégorie</target>
+      </trans-unit>
+      <trans-unit id="78hdYtD" resname="contact us!">
+        <source>contact us!</source>
+        <target>Contactez-nous</target>
+      </trans-unit>
+      <trans-unit id="jQc5Dxf" resname="Contact-us by mail">
+        <source>Contact-us by mail</source>
+        <target>Nous contacter</target>
+      </trans-unit>
+      <trans-unit id="ew0tjlL" resname="Hello there,">
+        <source>Hello there,</source>
+        <target>Bonjour,</target>
+      </trans-unit>
+      <trans-unit id="i2n1hId" resname="Please use the form below to contact us.">
+        <source>Please use the form below to contact us.</source>
+        <target>Merci d'utiliser le formulaire ci-dessous pour nous contacter.</target>
+      </trans-unit>
+      <trans-unit id="ueCZUJe" resname="We'll answer you as soon as possible.">
+        <source>We'll answer you as soon as possible.</source>
+        <target>Nous vous répondrons dès que possible.</target>
+      </trans-unit>
+      <trans-unit id="k6JrHq." resname="Send message">
+        <source>Send message</source>
+        <target>Envoyer le message</target>
+      </trans-unit>
+      <trans-unit id="VhJP71F" resname="DASHBOARD">
+        <source>DASHBOARD</source>
+        <target>TABLEAU DE BORD</target>
+      </trans-unit>
+      <trans-unit id="nYJcIfB" resname="Articles list">
+        <source>Articles list</source>
+        <target>Liste des articles</target>
+      </trans-unit>
+      <trans-unit id="VC5c7wa" resname="New article">
+        <source>New article</source>
+        <target>Nouvel article</target>
+      </trans-unit>
+      <trans-unit id="tPUFkDL" resname="CATEGORIES">
+        <source>CATEGORIES</source>
+        <target>CATEGORIES</target>
+      </trans-unit>
+      <trans-unit id="1VXNNVq" resname="Categories list">
+        <source>Categories list</source>
+        <target>Liste des catégories</target>
+      </trans-unit>
+      <trans-unit id="EjygrAP" resname="Tags list">
+        <source>Tags list</source>
+        <target>Liste des stags</target>
+      </trans-unit>
+      <trans-unit id="YJEX1bD" resname="New tag">
+        <source>New tag</source>
+        <target>Nouveau tag</target>
+      </trans-unit>
+      <trans-unit id="GbJHos7" resname="COMMENTS">
+        <source>COMMENTS</source>
+        <target>COMMENTAIRES</target>
+      </trans-unit>
+      <trans-unit id="D1kiEud" resname="Comments list">
+        <source>Comments list</source>
+        <target>Liste des commentaires</target>
+      </trans-unit>
+      <trans-unit id="_X6doOO" resname="Other">
+        <source>Other</source>
+        <target>Autre</target>
+      </trans-unit>
+      <trans-unit id="U_Z_uFz" resname="USERS">
+        <source>USERS</source>
+        <target>UTILISATEURS</target>
+      </trans-unit>
+      <trans-unit id="OnqBk.y" resname="Users list">
+        <source>Users list</source>
+        <target>Liste des utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="Y4T.p3E" resname="New user">
+        <source>New user</source>
+        <target>Nouvel utilisateur</target>
+      </trans-unit>
+      <trans-unit id="50fXK1D" resname="welcome!">
+        <source>welcome!</source>
+        <target>Bienvenue !</target>
+      </trans-unit>
+      <trans-unit id="tLWAqa2" resname="About us">
+        <source>About us</source>
+        <target>A propos</target>
+      </trans-unit>
+      <trans-unit id="XYxxq8U" resname="About Us">
+        <source>About Us</source>
+        <target>A propos</target>
+      </trans-unit>
+      <trans-unit id="vSTb9IR" resname="Hi! Please confirm your email!">
+        <source>Hi! Please confirm your email!</source>
+        <target>Bonjour ! Merci de confirmer votre email</target>
+      </trans-unit>
+      <trans-unit id="nZPB._o" resname="Please confirm your email address by clicking the following link">
+        <source>Please confirm your email address by clicking the following link</source>
+        <target>Merci de confirmer votre email en cliquant sur le lien suivant</target>
+      </trans-unit>
+      <trans-unit id="ITaQX9q" resname="Confirm my Email">
+        <source>Confirm my Email</source>
+        <target>Confirmer mon e-mail</target>
+      </trans-unit>
+      <trans-unit id="87wG9uu" resname="This link will expire in">
+        <source>This link will expire in</source>
+        <target>Ce lien expirera dans</target>
+      </trans-unit>
+      <trans-unit id="F7WctIl" resname="Cheers!">
+        <source>Cheers!</source>
+        <target>Cordialement,</target>
+      </trans-unit>
+      <trans-unit id="sjsDQVF" resname="Pravacy policy">
+        <source>Pravacy policy</source>
+        <target>Politique de vie privée</target>
+      </trans-unit>
+      <trans-unit id="xhGYH6u" resname="Policy">
+        <source>Policy</source>
+        <target>Politique</target>
+      </trans-unit>
+      <trans-unit id="2Cys4gg" resname="sign-up">
+        <source>sign-up</source>
+        <target>inscription</target>
+      </trans-unit>
+      <trans-unit id="PMCOvp1" resname="Sign-up">
+        <source>Sign-up</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="fS_tjMM" resname="Agree terms of service">
+        <source>Agree terms of service</source>
+        <target>Accepter les conditions d'utilisation du service</target>
+      </trans-unit>
+      <trans-unit id="u3I07BJ" resname="Register">
+        <source>Register</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="yUebZSk" resname="disclaimer">
+        <source>disclaimer</source>
+        <target>averstissement</target>
+      </trans-unit>
+      <trans-unit id="Up8OX0d" resname="terms of service">
+        <source>terms of service</source>
+        <target>Condition d'utilisation du service</target>
+      </trans-unit>
+      <trans-unit id="7eVImWS" resname="Terms">
+        <source>Terms</source>
+        <target>Conditions</target>
+      </trans-unit>
+      <trans-unit id="ad90wWE" resname="Terms Of Use">
+        <source>Terms Of Use</source>
+        <target>Conditions d'utilisation</target>
+      </trans-unit>
+      <trans-unit id="d1tb_WR" resname="Created at">
+        <source>Created at</source>
+        <target>Créé le</target>
+      </trans-unit>
+      <trans-unit id="PCEFPeg" resname="Updated at">
+        <source>Updated at</source>
+        <target>Mis à jour le</target>
+      </trans-unit>
+      <trans-unit id="nz33U6Q" resname="Create new">
+        <source>Create new</source>
+        <target>Créer un nouvel article</target>
+      </trans-unit>
+      <trans-unit id="qaeCoSj" resname="Edit Article">
+        <source>Edit Article</source>
+        <target>Modifier l'article</target>
+      </trans-unit>
+      <trans-unit id="ouBQbfX" resname="new articles">
+        <source>new articles</source>
+        <target>Nouveaux articles</target>
+      </trans-unit>
+      <trans-unit id="kZIZXY7" resname="Create new Article">
+        <source>Create new Article</source>
+        <target>Créer un nouvel article</target>
+      </trans-unit>
+      <trans-unit id="F7QsEmm" resname="Article index">
+        <source>Article index</source>
+        <target>Liste des articles</target>
+      </trans-unit>
+      <trans-unit id="wR61EIV" resname="ARTICLES">
+        <source>ARTICLES</source>
+        <target>ARTICLES</target>
+      </trans-unit>
+      <trans-unit id="ygD8z7Q" resname="error">
+        <source>error</source>
+        <target>erreur</target>
+      </trans-unit>
+      <trans-unit id="VKDowX6" resname="Error">
+        <source>Error</source>
+        <target>Erreur</target>
+      </trans-unit>
+      <trans-unit id="2Y7g5fk" resname="ERROR">
+        <source>ERROR</source>
+        <target>ERREUR</target>
+      </trans-unit>
+      <trans-unit id="yLPYZM9" resname="Click the button below">
+        <source>Click the button below</source>
+        <target>Cliquez le bouton ci-dessous</target>
+      </trans-unit>
+      <trans-unit id="LMK4hvw" resname="&quot;You shall not pass!&quot;">
+        <source>"You shall not pass!"</source>
+        <target>"Vous ne passerez pas !"</target>
+      </trans-unit>
+      <trans-unit id="QBQslRX" resname="UH OH! You're lost.">
+        <source>UH OH! You're lost.</source>
+        <target>Oula ! Vous êtes perdu.</target>
+      </trans-unit>
+      <trans-unit id="zt9CCIH" resname="The page you're looking for does not exist. How you got there is a mystery...">
+        <source>The page you're looking for does not exist. How you got there is a mystery...</source>
+        <target>La page que vous recherchez n'existe pas. Je ne comprends même pas comment vous êtes arrivé là...</target>
+      </trans-unit>
+      <trans-unit id="nIn3Ksz" resname="Admin Index">
+        <source>Admin Index</source>
+        <target>Admin Index</target>
+      </trans-unit>
+      <trans-unit id="XV7hV3U" resname="Presentation">
+        <source>Presentation</source>
+        <target>Présentation</target>
+      </trans-unit>
+      <trans-unit id="wlM3BVR" resname="Roles">
+        <source>Roles</source>
+        <target>Rôles</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="hDk63Yx" resname="article">
+        <source>article</source>
+        <target>article</target>
+      </trans-unit>
+      <trans-unit id="3NHVIj9" resname="Name">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="egV72Za" resname="Your message">
+        <source>Your message</source>
+        <target>Votre message</target>
+      </trans-unit>
+      <trans-unit id="ur9GrsQ" resname="Please copy antispam code">
+        <source>Please copy antispam code</source>
+        <target>Veuillez recopier le code antispam</target>
+      </trans-unit>
+      <trans-unit id="EzEnW8U" resname="Tags">
+        <source>Tags</source>
+        <target>Tags</target>
+      </trans-unit>
+      <trans-unit id="gS70Ec4" resname="Copy antispam code">
+        <source>Copy antispam code</source>
+        <target>Veuillez recopier le code antispam</target>
+      </trans-unit>
+      <trans-unit id="Iyr1KHm" resname="Article image">
+        <source>Article image</source>
+        <target>Image de l'article</target>
+      </trans-unit>
+      <trans-unit id="qXbWTEY" resname="Article's categories. Choose one or more.">
+        <source>Article's categories. Choose one or more.</source>
+        <target>Catégories de l'article. Choisissez-en une ou plusieurs.</target>
+      </trans-unit>
+      <trans-unit id="WUzBrPl" resname="Article's tags. Choose one or more.">
+        <source>Article's tags. Choose one or more.</source>
+        <target>Tags de l'article. Choisissez-en un ou plusieurs.</target>
+      </trans-unit>
+      <trans-unit id="WfpDeb4" resname="Reset your password">
+        <source>Reset your password</source>
+        <target>Réinitialisez votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="4O3_s6c" resname="Reset password">
+        <source>Reset password</source>
+        <target>Réinitialisez le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="pOLodE6" resname="Enter your email address and we we will send you a link to reset your&#10;                            password.">
+        <source>Enter your email address and we we will send you a link to reset your
+                            password.</source>
+        <target>Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit id="y2XxXvP" resname="Send password reset email">
+        <source>Send password reset email</source>
+        <target>Envoyer un e-mail de réinitialisation de mot de passe</target>
+      </trans-unit>
+      <trans-unit id="ylHOH7F" resname="Hi!">
+        <source>Hi!</source>
+        <target>Salut !</target>
+      </trans-unit>
+      <trans-unit id="vQH5j0c" resname="To reset your password, please visit the following link">
+        <source>To reset your password, please visit the following link</source>
+        <target>Pour réinitialiser votre mot de passe, veuillez visiter le lien suivant</target>
+      </trans-unit>
+      <trans-unit id="U28cTzJ" resname="Password Reset Email Sent">
+        <source>Password Reset Email Sent</source>
+        <target>E-mail de réinitialisation du mot de passe envoyé</target>
+      </trans-unit>
+      <trans-unit id="ztgfIk9" resname="If an account matching your email exists, then an email was just sent that contains a&#10;                        link that you can use to reset your password.&#10;                        This link will expire in">
+        <source>If an account matching your email exists, then an email was just sent that contains a
+                        link that you can use to reset your password.
+                        This link will expire in</source>
+        <target>S'il existe un compte correspondant à votre e-mail, un e-mail vient d'être envoyé contenant un lien que vous pouvez utiliser pour réinitialiser votre mot de passe. Ce lien expirera dans </target>
+      </trans-unit>
+      <trans-unit id="bs9avOq" resname="If you don't receive an email please check your spam folder or">
+        <source>If you don't receive an email please check your spam folder or</source>
+        <target>Si vous ne recevez pas d'e-mail, veuillez vérifier votre dossier spam ou</target>
+      </trans-unit>
+      <trans-unit id="W13t7jL" resname="try again">
+        <source>try again</source>
+        <target>essayez de nouveau</target>
+      </trans-unit>
+      <trans-unit id="dW2OSVc" resname="reset your password">
+        <source>reset your password</source>
+        <target>réinitialisez votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="BHZbeis" resname="Active image">
+        <source>Active image</source>
+        <target>Image de l'article</target>
+      </trans-unit>
+      <trans-unit id="_7yY7mO" resname="Delete image">
+        <source>Delete image</source>
+        <target>Supprimer l'image</target>
+      </trans-unit>
+      <trans-unit id="TGpgYKv" resname="No active image for this article. Please upload one.">
+        <source>No active image for this article. Please upload one.</source>
+        <target>Il n'y a aucune image active pour cet article. Veuillez en choisir une</target>
+      </trans-unit>
+      <trans-unit id="r9gMWhu" resname="Posted">
+        <source>Posted</source>
+        <target>Posté</target>
+      </trans-unit>
+      <trans-unit id="nELiYXc" resname="Password lost?">
+        <source>Password lost?</source>
+        <target>Mot de passe perdu ?</target>
+      </trans-unit>
+      <trans-unit id="6WjzSgl" resname="Thank you for your registration ! You will quickly receive an email to validate your address.">
+        <source>Thank you for your registration ! You will quickly receive an email to validate your address.</source>
+        <target>Merci pour votre inscription ! Vous allez rapidement recevoir un e-mail afin de valider votre adresse.</target>
+      </trans-unit>
+      <trans-unit id="Kyjdz4N" resname="Your email address has been verified. You're logged in.">
+        <source>Your email address has been verified. You're logged in.</source>
+        <target>Votre adresse e-mail a été vérifiée. Vous êtes connecté(e).</target>
+      </trans-unit>
+      <trans-unit id="Il4.Cjw" resname="Then please sign-in.">
+        <source>Then please sign-in.</source>
+        <target>Veuillez alors vous connecter.</target>
+      </trans-unit>
+      <trans-unit id="Ave2xbb" resname="User edited with success!">
+        <source>User edited with success!</source>
+        <target>Utilisateur modifié avec succès !</target>
+      </trans-unit>
+      <trans-unit id="wcEAnT8" resname="Update">
+        <source>Update</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="FQn1YfJ" resname="Save">
+        <source>Save</source>
+        <target>Enregistrer</target>
+      </trans-unit>
+      <trans-unit id="tKc2V0D" resname="Stats">
+        <source>Stats</source>
+        <target>Stats</target>
+      </trans-unit>
+      <trans-unit id="qAgRz2i" resname="Posts">
+        <source>Posts</source>
+        <target>Articles</target>
+      </trans-unit>
+      <trans-unit id="acQEWR6" resname="Views">
+        <source>Views</source>
+        <target>Lectures</target>
+      </trans-unit>
+      <trans-unit id="aS4hs5k" resname="Links index">
+        <source>Links index</source>
+        <target>Index des liens web</target>
+      </trans-unit>
+      <trans-unit id="0Oit8cX" resname="Link index">
+        <source>Link index</source>
+        <target>Index des liens web</target>
+      </trans-unit>
+      <trans-unit id="LQM.MIO" resname="Create new link">
+        <source>Create new link</source>
+        <target>Créer un nouveau lien web</target>
+      </trans-unit>
+      <trans-unit id="VdplqFW" resname="LINKS">
+        <source>LINKS</source>
+        <target>LIENS WEB</target>
+      </trans-unit>
+      <trans-unit id="PDXlYBS" resname="Links list">
+        <source>Links list</source>
+        <target>Liste des liens web</target>
+      </trans-unit>
+      <trans-unit id="mO4N_zO" resname="New link">
+        <source>New link</source>
+        <target>Nouveau lien web</target>
+      </trans-unit>
+      <trans-unit id="kCTBl9h" resname="Links">
+        <source>Links</source>
+        <target>Liens web</target>
+      </trans-unit>
+      <trans-unit id="kCTBl9i" resname="Is it active?">
+        <source>Is it active?</source>
+        <target>Cet article est-il actif ?</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

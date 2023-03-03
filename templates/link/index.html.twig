@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}Links index{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Link index{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li>{% trans %}Link index{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+            <div class="row py-5">
+                <div class="col mb-4">
+                    <h2>{% trans %}Link index{% endtrans %}</h2>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        {% for link in links %}
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title border-bottom pb-1">
+                                        <i class="bi bi-link-45deg"></i> <a href="{{ link.url }}"
+                                            class="text-dark">{{ link.title }}</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        {{ link.presentation }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {% else %}
+                            {% trans %}no records found{% endtrans %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

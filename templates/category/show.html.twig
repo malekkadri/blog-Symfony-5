@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ site_name }}: {{ category.title }}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Category{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li><a href="{{ path('category_index') }}">{% trans %}Category{% endtrans %}</a></li>
+                    <li>{{ category.title }}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row py-5">
+
+                <div class="col mb-4">
+                    <h2>{{ category.title }}</h2>
+
+                    <p>{% trans %}Category's articles{% endtrans %}</p>
+                    {% for c in category.articles %}
+                        <div class="row py-1">
+                            <div class="col">
+                                <i class="bi bi-arrow-down-right-square-fill"></i> <a href="{{ path('article_show', { 'slug': c.slug }) }}">{{ c.title }}</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+{% endblock %}

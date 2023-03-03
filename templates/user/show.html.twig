@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ site_name }}: 
+    {% if (app.user.id == user.id) or (is_granted('ROLE_ADMIN')) %}
+        {{ user.username }}
+    {% else %}
+    {% trans %}Acces denied!{% endtrans %}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}User{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    {% if (app.user.id == user.id) or (is_granted('ROLE_ADMIN')) %}
+                        <li>{{ user.username }} {% trans %}profil{% endtrans %}</li>
+                    {% else %}
+                        <li>{% trans %}Acces denied!{% endtrans %}</li>
+                    {% endif %}
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            {% for message in app.flashes('message') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message|trans }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+
+            {% if app.user %}
+                    {% if (app.user.id == user.id) or (is_granted('ROLE_ADMIN')) %}
+
+                        <div class="row d-flex justify-content-center mb-5">
+                            <div class="col">
+                                <h2>{{ user.username }}</h2>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="row">
+                                            <div class="col d-flex justify-content-center align-items-center">
+                                                {% if user.image %}
+                                                    <img src="../uploads/images/users/{{ user.image }}" alt="{{ user.username }}" class="img-fluid" style="max-width: 150px; width: 100%;">
+                                                {% else %}
+                                                    <img src="{{ asset('img/no-image.png') }}" alt="{{ user.username }}" class="img-fluid" style="max-width: 150px; width: 100%;">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="d-flex justify-content-between align-items-center mt-2 px-3">
+                                                    <span class="badge bg-warning rounded-pill">ID: {{ user.id }}</span>
+                                                    <span class="badge bg-primary rounded-pill">{% trans %}Verified{% endtrans %}: {{ user.isVerified ? '<i class="bi bi-check-lg"></i>' : '<i class="bi bi-exclamation-lg"></i>' }}</span>
+                                                </p>
+                                                <p class="d-flex justify-content-between align-items-center mt-2 px-3 lead">
+                                                    {% if user.facebook %}
+                                                        <a href="{{ user.facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+                                                    {% endif %}
+                                                    {% if user.twitter %}
+                                                        <a href="{{ user.twitter }}" target="_blank"><i class="bi bi-twitter"></i></a>
+                                                    {% endif %}
+                                                    {% if user.instagram %}
+                                                        <a href="{{ user.instagram }}" target="_blank"><i class="bi bi-instagram"></i></a>
+                                                    {% endif %}
+                                                    {% if user.linkedin %}
+                                                        <a href="{{ user.linkedin }}" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                                    {% endif %}
+                                                    {% if user.github %}
+                                                        <a href="{{ user.github }}" target="_blank"><i class="bi bi-github"></i></a>
+                                                    {% endif %}
+                                                    {% if user.youtube %}
+                                                        <a href="{{ user.youtube }}" target="_blank"><i class="bi bi-youtube"></i></a>
+                                                    {% endif %}
+                                                    {% if user.discord %}
+                                                        <a href="{{ user.discord }}" target="_blank"><i class="bi bi-discord"></i></a>
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col">
+                                        {% trans %}Presentation{% endtrans %}:
+                                        <p class="bg-light p-2 mt-1 rounded">
+                                            {{ user.presentation|raw }}
+                                        </p>
+                                        <p>
+                                            Email: {{ user.email }}<br>
+                                            Role: 
+                                            {% if user.roles|json_encode == '["ROLE_USER"]' %}
+                                                <span class="text-primary fw-bold">{% trans %}User{% endtrans %}</span>
+                                            {% else %}
+                                                <span class="text-danger fw-bold">Admin</span>
+                                            {% endif %}
+                                        </p>
+                                        <div class="row mt-5">
+                                            <div class="col d-flex justify-content-end">
+                                                <a class="btn btn-warning me-1" href="{{ path('app_forgot_password_request') }}">{% trans %}reset your password{% endtrans %}</a> 
+                                                <a class="btn btn-success" href="{{ path('user_edit', {'id': user.id}) }}">{% trans %}edit profile{% endtrans %}</a> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="row d-flex justify-content-center mb-5">
+                            <div class="col text-center">
+                                <h1 class="display-1">
+                                    <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                </h1>
+                                <h3>
+                                    {% trans %}Access denied!{% endtrans %}
+                                </h3>
+
+                                <div class="mt-5 pb-4 text-center">
+                                    <a class="btn btn-primary p-3 lead" href="{{ path('home') }}">
+                                        {% trans %}Back to Home page{% endtrans %}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div class="col pt-4 pb-2 px-3 alert alert-danger text-center">
+                        <p>
+                            <i class="bi bi-exclamation-triangle-fill h1 fw-bold"></i>
+                        </p>
+                        <p>
+                            {% trans %}Access denied!{% endtrans %}
+                        </p>
+                        <p>
+                            <a class="btn btn-primary2" href="{{ path('home') }}"><i class="fas fa-home"></i> {% trans %}Back to Home page{% endtrans %}</a>
+                        </p>
+                    </div>
+            {% endif %}
+        </div>
+    </section>
+</main>
+{% endblock %}

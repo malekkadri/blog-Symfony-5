@@ -1,0 +1,6 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-sm btn-success">{{ button_label|default('Save')|trans }}</button> 
+    <button class="btn btn-sm btn-secondary" type="reset">{% trans %}reset{% endtrans %}</button> 
+    <a class="btn btn-sm btn-primary" href="{{ path('user_show', {'id': app.user.id})}}">{% trans %}back to profile{% endtrans %}</a>
+{{ form_end(form) }}

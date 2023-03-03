@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  composer:
+    command: composer update --prefer-lowest --no-interaction
+    volumes:
+      - .:/var/php
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        php_version: 7.4

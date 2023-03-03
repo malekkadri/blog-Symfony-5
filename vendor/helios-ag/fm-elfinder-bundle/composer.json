@@ -1,0 +1,58 @@
+{
+    "name": "helios-ag/fm-elfinder-bundle",
+    "description": "ElFinder bundle, adds ElFinder file manager to your Symfony project",
+    "keywords": ["elfinder", "file manager", "wysiwyg"],
+    "type": "symfony-bundle",
+    "homepage": "https://github.com/helios-ag/FMElfinderBundle",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Al Ganiev",
+            "email": "helios.ag@gmail.com"
+        },
+        {
+            "name": "Symfony Community",
+            "homepage": "https://github.com/helios-ag/FMElfinderBundle/contributors"
+        }
+    ],
+    "archive": {
+      "exclude": ["/tests", "./github"]
+    },
+    "require": {
+        "php":                                 "^7.2 || ^8.0",
+        "ext-json":                            "*",
+        "symfony/framework-bundle":            "^4.4 || ^5.0 || ^5.2",
+        "symfony/twig-bundle":                 "^4.4 || ^5.0 || ^5.2",
+        "symfony/form":                        "^4.4 || ^5.0 || ^5.2",
+        "symfony/asset":                       "^4.4 || ^5.0 || ^5.2",
+        "symfony/flex":                        "1.*",
+        "studio-42/elfinder":                  "~2.1"
+    },
+    "require-dev" : {
+        "symfony/phpunit-bridge": "^4.1 || ^5.0 || ^5.2",
+        "matthiasnoback/symfony-config-test":  "^4.0",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.1",
+        "symfony/finder": "^4.4 || ^5.0 || ^5.2",
+        "php-coveralls/php-coveralls": "^2.0",
+        "phpunit/phpunit": "^8.5"
+    },
+    "suggest": {
+        "helios-ag/fm-tinymce-bundle": "FMTinyMCEBundle WYSIWYG Editor Bundle",
+        "helios-ag/fm-summernote-bundle": "FMSummernoteBundle WYSIWYG Editor Bundle",
+        "friendsofsymfony/ckeditor-bundle": "FOSCKEditorBundle WYSIWYG Editor Bundle",
+        "barryvdh/elfinder-flysystem-driver": "Flysystem driver for elfinder",
+        "spatie/flysystem-dropbox": "Dropbox 2 Driver for Flysystem"
+    },
+    "autoload": {
+        "psr-4": { "FM\\ElfinderBundle\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "FM\\ElfinderBundle\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "10.0-dev"
+        }
+    }
+}

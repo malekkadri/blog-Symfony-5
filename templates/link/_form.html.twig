@@ -1,0 +1,6 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-sm btn-success">{{ button_label|default('Save')|trans }}</button> 
+    <button class="btn btn-sm btn-secondary" type="reset">{% trans %}Reset{% endtrans %}</button>
+    <a class="btn btn-sm btn-primary" href="{{ path('link_index') }}">{% trans %}back to list{% endtrans %}</a>
+{{ form_end(form) }}

@@ -1,0 +1,91 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}tag index{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Tag</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li><a href="{{ path('admin') }}">Admin</a></li>
+                    <li>{% trans %}Tag index{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+   <!-- ======= Blog Section ======= -->
+   <section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row py-5">
+
+            {% for message in app.flashes('message') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert"">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+
+            {% for message in app.flashes('message_deleted') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert"">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+
+            <div class="col mb-4">
+                <h1>{% trans %}Tag index{% endtrans %}</h1>
+
+                <table class="table mb-5">
+                    <thead>
+                        <tr>
+                            <th width="4%">{{ knp_pagination_sortable(tags, 'Id', 'p.id') }}</th>
+                            <th>{{ knp_pagination_sortable(tags, 'Title', 'p.title') }}</th>
+                            <th>Slug</th>
+                            <th width="11%"></th>
+                            <th width="4%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for tag in tags %}
+                        <tr>
+                            <td>{{ tag.id }}</td>
+                            <td>{{ tag.title }}</td>
+                            <td>{{ tag.slug }}</td>
+                            <td>
+                               
+                                <a class="btn btn-sm btn-warning" href="{{ path('tag_edit', {'id': tag.id}) }}">{% trans %}edit{% endtrans %}</a>
+                            </td>
+                            <td>
+                                {{ include('tag/_delete_form.html.twig') }}
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="4">{% trans %}no records found{% endtrans %}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <a class="btn btn-success" href="{{ path('tag_new') }}">{% trans %}Create new tag{% endtrans %}</a>
+
+            </div>
+            <div class="pagination justify-content-center px-2 mt-4">
+                {{ knp_pagination_render(tags) }}
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+{% endblock %}

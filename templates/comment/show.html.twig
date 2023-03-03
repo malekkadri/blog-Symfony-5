@@ -1,0 +1,80 @@
+{% extends 'base-admin.html.twig' %}
+{% block title %}{{ site_name }}: {% trans %}Comment{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Comment{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li><a href="{{ path('admin') }}">Admin</a></li>
+                    <li>{% trans %}Comment index{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    <h1>{% trans %}Comment{% endtrans %}</h1>
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>Id</th>
+                                <td>{{ comment.id }}</td>
+                            </tr>
+                            <tr>
+                                <th>{% trans %}Content{% endtrans %}</th>
+                                <td>{{ comment.content }}</td>
+                            </tr>
+                            <tr>
+                                <th>{% trans %}Is_active{% endtrans %}</th>
+                                <td>{{ comment.isActive ? 'Yes' : 'No' }}</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td>{{ comment.email }}</td>
+                            </tr>
+                            <tr>
+                                <th>{% trans %}Nickname{% endtrans %}</th>
+                                <td>{{ comment.nickname }}</td>
+                            </tr>
+                            <tr>
+                                <th>{% trans %}Created_at{% endtrans %}</th>
+                                <td>{{ comment.createdAt ? comment.createdAt|format_datetime('medium', 'short') : '' }}</td>
+                            </tr>
+                            <tr>
+                                <th>Rgpd</th>
+                                <td>{{ comment.rgpd ? 'Yes' : 'No' }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row mt-5">
+                        <div class="col">
+                            <a class="btn btn-sm btn-success" href="{{ path('comment_edit', {'id': comment.id}) }}">{% trans %}edit{% endtrans %}</a>
+                            <a class="btn btn-sm btn-primary" href="{{ path('comment_index') }}">{% trans %}back to list{% endtrans %}</a>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            {{ include('comment/_delete_form.html.twig') }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

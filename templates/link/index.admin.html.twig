@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}Links index{% endtrans %}{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{% trans %}Links index{% endtrans %}</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li><a href="{{ path('admin') }}">Admin</a></li>
+                    <li>{% trans %}Links index{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    <h2>Links index</h2>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>{% trans %}Title{% endtrans %}</th>
+                                <th>Url</th>
+                                <th>{% trans %}Presentation{% endtrans %}</th>
+                                <th width="9%"></th>
+                                <th width="4%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for link in links %}
+                            <tr>
+                                <td>{{ link.id }}</td>
+                                <td>{{ link.title }}</td>
+                                <td>{{ link.url }}</td>
+                                <td>{{ link.presentation }}</td>
+                                <td>
+                                    <a class="btn btn-sm btn-info" href="{{ path('link_show', {'id': link.id}) }}">{% trans %}show{% endtrans %}</a>
+                                    <a class="btn btn-sm btn-warning" href="{{ path('link_edit', {'id': link.id}) }}">{% trans %}edit{% endtrans %}</a>
+                                </td>
+                                <td>
+                                    {{ include('link/_delete_form.html.twig') }}
+                                </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="5">{% trans %}no records found{% endtrans %}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <a class="btn btn-success" href="{{ path('link_new') }}">{% trans %}Create new link{% endtrans %}</a>
+                </div>
+            </div>
+            <div class="pagination justify-content-center px-2 mt-4">
+                {{ knp_pagination_render(links) }}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

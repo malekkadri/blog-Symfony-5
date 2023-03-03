@@ -1,0 +1,22 @@
+<?php //App%255CEntity%255CTag%2524article
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\ManyToMany'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToMany')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'targetEntity' => [
+                'App\\Entity\\Article',
+            ],
+            'mappedBy' => [
+                'tag',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

@@ -1,0 +1,47 @@
+<?php //ee9ae42ac2720da7c2885cc0ff7c107f
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT a0_.title AS title_0, a0_.slug AS slug_1, a0_.created_at AS created_at_2, a0_.image AS image_3, a0_.views AS views_4 FROM article a0_ WHERE a0_.is_active = 1 ORDER BY a0_.views DESC LIMIT 5',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'title_0' => 'title',
+                    'slug_1' => 'slug',
+                    'created_at_2' => 'created_at',
+                    'image_3' => 'image',
+                    'views_4' => 'views',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'title_0' => 'string',
+                    'slug_1' => 'string',
+                    'created_at_2' => 'datetime_immutable',
+                    'image_3' => 'string',
+                    'views_4' => 'integer',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

@@ -1,0 +1,151 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ site_name }}: {% trans %}welcome!{% endtrans %}{% endblock %}
+
+{% block body %}
+
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{{ site_name_full }}</h2>
+
+                <ol>
+                    <li>{% trans %}Home{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+
+                <div class="col-lg-8 entries">
+
+                    {% for msg in app.session.flashBag.get('successEmail') %}
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ msg|trans }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+
+                    {% for art in articles %}
+ 
+
+<div class="card" style="width: 18rem;">
+ <img src="../uploads/images/articles/{{ art.image }}" alt="{{ art.title }}" class="img-fluid" height="400" width="500">
+  <div class="card-body">
+    <h5 class="card-title">{% for c in art.category %}
+                                    <a href="{{ path('category_show', {'slug': c.slug}) }}">
+                                        <span class="badge bg-secondary fs-6">{{ c.title }}</span>
+                                    </a>
+                                {% endfor %}</h5>
+     <h5 class="card-title">{% for t in art.tag %}
+                                    <a href="{{ path('tag_show', {'slug': t.slug}) }}">
+                                        <button class="btn btn-sm border border-secondary rounded-pill px-2 py-0" style="font-size: 11px;">{{ t.title }}</button>
+                                    </a>
+                                {% endfor %}</h5>
+                                <h2 class="entry-title">
+                                <a href="{{ path('article_show', {'slug': art.slug}) }}">{{ art.title }}</a>
+                            </h2>
+       <div class="entry-meta">
+                                <ul>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="">{% trans %}Posted by{% endtrans %} {{ art.author }}</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="">{% trans %}Posted {% endtrans %} {{ art.createdAt|ago }}</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> 
+                                        {% if (art.comment|length) <= 1  %}
+                                            <a href="">{{ art.comment|length }} {% trans %}Comment{% endtrans %}</a>
+                                        {% else %}
+                                            <a href="">{{ art.comment|length }} {% trans %}Comments{% endtrans %}</a>
+                                        {% endif %}
+                                    </li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-eye"></i> <a href="">{{ art.views }} {% trans %}views{% endtrans %}</a></li>
+                                </ul>
+                            </div>
+    <p class="card-text">{{ art.content|slice(0,250)|raw }}...</p>
+    <a href=""{{ path('article_show', {'slug': art.slug}) }}"" class="btn btn-primary">Read more</a>
+  <br>
+  <br>
+  </div>
+</div>
+
+
+                        {# <article class="entry">
+
+                            <div class="entry-img">
+                                <img src="../uploads/images/articles/{{ art.image }}" alt="{{ art.title }}" class="img-fluid" height="400" width="500">
+                            </div>
+
+                            <div class="mb-2">
+                                {% for c in art.category %}
+                                    <a href="{{ path('category_show', {'slug': c.slug}) }}">
+                                        <span class="badge bg-secondary fs-6">{{ c.title }}</span>
+                                    </a>
+                                {% endfor %}
+                            </div>
+
+                            <div class="mb-3">
+                                {% for t in art.tag %}
+                                    <a href="{{ path('tag_show', {'slug': t.slug}) }}">
+                                        <button class="btn btn-sm border border-secondary rounded-pill px-2 py-0" style="font-size: 11px;">{{ t.title }}</button>
+                                    </a>
+                                {% endfor %}
+                            </div>
+
+                            <h2 class="entry-title">
+                                <a href="{{ path('article_show', {'slug': art.slug}) }}">{{ art.title }}</a>
+                            </h2>
+
+                            <div class="entry-meta">
+                                <ul>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="">{% trans %}Posted by{% endtrans %} {{ art.author }}</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="">{% trans %}Posted {% endtrans %} {{ art.createdAt|ago }}</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> 
+                                        {% if (art.comment|length) <= 1  %}
+                                            <a href="">{{ art.comment|length }} {% trans %}Comment{% endtrans %}</a>
+                                        {% else %}
+                                            <a href="">{{ art.comment|length }} {% trans %}Comments{% endtrans %}</a>
+                                        {% endif %}
+                                    </li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-eye"></i> <a href="">{{ art.views }} {% trans %}views{% endtrans %}</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="entry-content">
+                                <p>
+                                    {{ art.content|slice(0,250)|raw }}...
+                                </p>
+                                <div class="read-more">
+                                    <a href="{{ path('article_show', {'slug': art.slug}) }}">{% trans %}Read More{% endtrans %}</a>
+                                </div>
+                            </div>
+
+                        </article><!-- End blog entry --> #}
+
+                    {% endfor %}
+
+                    <div class="pagination justify-content-center px-2 mt-4">
+                        {{ knp_pagination_render(articles) }}
+                    </div>
+
+                </div><!-- End blog entries list -->
+
+                {% block sidebar %}
+                    {{ sidebar() }}
+                {% endblock %}
+
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+</main><!-- End #main -->
+
+{% endblock %}

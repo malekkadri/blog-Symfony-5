@@ -1,0 +1,96 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}{{ site_name }}: articles index{% endblock %}
+
+{% block body %}
+<main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Blog</h2>
+
+                <ol>
+                    <li><a href="{{ path('home') }}">{% trans %}Home{% endtrans %}</a></li>
+                    <li><a href="{{ path('admin') }}">Admin</a></li>
+                    <li>{% trans %}Article index{% endtrans %}</li>
+                </ol>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            {% for message in app.flashes('message') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+
+            {% for message in app.flashes('message_deleted') %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col">
+                    <h2>{% trans %}Article index{% endtrans %}</h2>
+
+                    <div class="table-responsive-sm">
+                    <table class="table table-sm table-hover">
+                        <thead>
+                            <tr>
+                                <th width="4%">{{ knp_pagination_sortable(articles, 'Id', 'p.id') }}</th>
+                                <th>{{ knp_pagination_sortable(articles, 'Title', 'p.title') }}</th>
+                                <th width="14%" class="small">{{ knp_pagination_sortable(articles, 'Posted on', 'p.created_at') }}</th>
+                                <th width="14%" class="small">{{ knp_pagination_sortable(articles, 'Updated on', 'p.updated_at') }}</th>
+                                <th width="5%" class="small">{{ knp_pagination_sortable(articles, 'Active', 'p.is_active') }}</th>
+                                <th width="5%" class="small">{{ knp_pagination_sortable(articles, 'Views', 'p.views') }}</th>
+                                <th width="12%"></th>
+                                <th width="5%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for article in articles %}
+                            <tr>
+                                <td>{{ article.id }}</td>
+                                <td>{{ article.title }}</td>
+                                <td class="small">{{ article.createdAt ? article.createdAt|format_datetime('medium', 'short') : '' }}</td>
+                                <td class="small">{{ article.updatedAt ? article.updatedAt|format_datetime('medium', 'short') : '' }}</td>
+                                <td class="small">{{ article.isActive ? 'Yes' : 'No' }}</td>
+                                <td class="small">{{ article.views }}</td>
+                                <td>
+                                    
+                                    <a class="btn btn-sm btn-warning" href="{{ path('article_edit', {'id': article.id}) }}">{% trans %}edit{% endtrans %}</a>
+                                </td>
+                                <td>
+                                    {{ include('article/_delete_form.html.twig') }}
+                                </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="9">{% trans %}no records found{% endtrans %}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <a class="btn btn-success" href="{{ path('article_new') }}">{% trans %}Create new{% endtrans %}</a>
+                </div>
+            </div>
+            <div class="pagination justify-content-center px-2 mt-4">
+                {{ knp_pagination_render(articles) }}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

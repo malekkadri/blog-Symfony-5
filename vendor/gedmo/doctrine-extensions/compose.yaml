@@ -1,0 +1,25 @@
+services:
+  php:
+    build:
+      context: .docker/php
+      target: php
+      args:
+        PHP_VERSION: ${PHP_VERSION:-8.1-cli}
+    volumes:
+      - .:/var/www
+    working_dir: /var/www
+    environment:
+      MONGODB_SERVER: 'mongodb://mongodb:27017'
+    tty: true
+    stdin_open: true
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: de_root_password
+      MYSQL_DATABASE: de_testing
+      MYSQL_USER: de_user
+      MYSQL_PASSWORD: de_password
+
+  mongodb:
+    image: mongo
