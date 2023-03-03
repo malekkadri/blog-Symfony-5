@@ -51,7 +51,7 @@ If you add any language, don't forget to update config/services.yaml adding the 
 * tags cloud
 
 ## To initialize the project 
-* clone the repository: `git clone https://github.com/citizenz7/blog.git`
+* clone the repository: `git clone https://github.com/malekkadri/blog-Symfony-5.git`
 * Install all packages : `composer install`
 * set up a `.env.local` file from `.env` with:
     * MySQL credentials, server address, server port, database name
